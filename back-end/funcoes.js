@@ -116,9 +116,23 @@ function novaPagina(){
                         <button id="btnExcluir">Excluir</button>
                     </div>
                 `
+
+                document.getElementById("btnExcluir").addEventListener("click", () => {
+                    excluir(id)
+                })
             })
     }
-    
-    carregarDetalhes()
-    
 }
+
+function excluir(id){
+   
+        let filmes = JSON.parse(localStorage.getItem("filmes")) || []
+    
+        filmes = filmes.filter(filme => filme.id !== id)
+    
+        localStorage.setItem("filmes", JSON.stringify(filmes))
+
+        
+}
+
+
