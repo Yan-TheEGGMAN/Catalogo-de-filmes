@@ -113,15 +113,20 @@ function novaPagina(){
                         <h1>${filme.nome}</h1>
                         <p>${filme.descricao}</p>
                         <h3>Ano: ${filme.ano}</h3>
-                        <button id="btnExcluir">Excluir</button>
                     </div>
                 `
 
                 document.getElementById("btnExcluir").addEventListener("click", () => {
                     excluir(id)
+                    window.location.href = "index.html"
+
                 })
+
             })
     }
+
+    carregarDetalhes()
+
 }
 
 function excluir(id){
