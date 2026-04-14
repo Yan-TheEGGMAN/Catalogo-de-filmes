@@ -7,20 +7,26 @@
     <title>Criar Filme</title>
 </head>
 <body class="cinema">
-    <div class="container">
+
+    <div class="form-wrapper">
         <div class="card-criar">
+            <h2 class="titulo-form">Adicionar Filme</h2>
+
             <form id="form">
-                <input type="text" id="nome" placeholder="Nome"><br><br>
-            
-                <input type="text" id="descricao" placeholder="Descrição"><br><br>
-            
-                <input type="text" id="imagem" placeholder="URL da imagem"><br><br>
+                <input type="text" id="nome" placeholder="Nome">
 
-                <input type="text" id="ano" placeholder="Ano do filme"><br><br>
+                <input type="text" id="descricao" placeholder="Descrição">
 
-            
-                <button type="submit" onclick="window.location.href='index.html'">Enviar</button>
+                <input type="text" id="imagem" placeholder="URL da imagem">
+
+                <input type="text" id="ano" placeholder="Ano do filme">
+
+                <button type="submit" class="btn">Enviar</button>
             </form>
+
+            <button class="btn voltar" onclick="window.location.href='index.html'">
+                Voltar
+            </button>
         </div>
     </div>
 
@@ -28,5 +34,6 @@
     <script>
         adicionar()
     </script>
+
 </body>
 </html>
