@@ -2,8 +2,11 @@ function carregar(){
     fetch("../back-end/produtos.json").then(response => response.json()) //Pega os dados do JSON e converte para o formato
     .then(produtos => {
         const container =  document.getElementById("catalogo")
-        
-        produtos.map(filme =>{
+
+        const filmesSalvos = JSON.parse(localStorage.getItem("filmes")) || []
+
+        const todosFilmes = [...produtos, ...filmesSalvos]
+        todosFilmes.map(filme =>{
             const card = document.createElement("div")
             card.classList.add("card")
 
