@@ -27,6 +27,11 @@ function carregar(){
             card.appendChild(titulo)
             card.appendChild(desc)
             card.appendChild(ano)
+
+            card.addEventListener("click", () => {
+                window.location.href = `detalhes.html?id=${filme.id}`
+            })
+            
             container.appendChild(card)
         })
     })
@@ -52,35 +57,67 @@ function adicionar(){
             ano: ano
         }
 
-        if (isNaN(ano)) {
+        if (isNaN(ano)) {//EVITA CAMPO SEM NUMEROS
             alert("O campo ano deve ter apenas números")
             return
         }
 
         const imgTeste = new Image()
 
-        imgTeste.onload = () => {
+        imgTeste.onload = () => { //CASO APROVADO
             console.log("imagem válida")
+            let filmes = JSON.parse(localStorage.getItem("filmes")) || []
+
+            filmes.push(novoFilme)
+
+            localStorage.setItem("filmes", JSON.stringify(filmes))
+
+            alert("Filme adicionado com sucesso!")
+
+            form.reset()
         }
 
-        imgTeste.onerror = () => {
+
+        imgTeste.onerror = () => { //CASO DE ERRO DE QUEBRA DE IMAGEM
             alert("A imagem não carregou. Verifique a URL.")
         }
 
         imgTeste.src = imagem
-
-
-        let filmes = JSON.parse(localStorage.getItem("filmes")) || []
-
-        filmes.push(novoFilme)
-
-        localStorage.setItem("filmes", JSON.stringify(filmes))
-
-        alert("Filme adicionado com sucesso!")
-
-        form.reset()
-
-
-
     })
+}
+
+function novaPagina(){
+    function carregarDetalhes() {
+        const params = new URLSearchParams(window.location.search)
+        const id = params.get("id")
+    
+        fetch("../back-end/produtos.json")
+            .then(response => response.json())
+            .then(produtos => {
+                const filmesSalvos = JSON.parse(localStorage.getItem("filmes")) || []
+    
+                const todosFilmes = [...produtos, ...filmesSalvos]
+    
+                const filme = todosFilmes.find(item => item.id === id)
+    
+                const detalhes = document.getElementById("detalhes")
+    
+                if (!filme) {
+                    detalhes.innerHTML = "<h1>Filme não encontrado</h1>"
+                    return
+                }
+    
+                detalhes.innerHTML = `
+                    <div class="card">
+                        <img src="${filme.imagem}" alt="${filme.nome}">
+                        <h1>${filme.nome}</h1>
+                        <p>${filme.descricao}</p>
+                        <h3>Ano: ${filme.ano}</h3>
+                    </div>
+                `
+            })
+    }
+    
+    carregarDetalhes()
+    
 }
