@@ -55,7 +55,73 @@ body{
 }
 
 
+/* Criar Filme */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-criar {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.card-criar input {
+    width: 100%;
+    max-width: 250px; 
+    padding: 8px;
+    margin: 0 auto 12px auto; 
+    display: block;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+.titulo-form {
+    margin-bottom: 20px;
+}
+
+.card-criar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #b90000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.btn:hover {
+    background-color: #a00000;
+}
+
+.voltar {
+    background-color: #444;
+}
+
+.voltar:hover {
+    background-color: #333;
+}
+
+
 /* Sobre */
+
 
 .sobre {
     max-width: 800px;

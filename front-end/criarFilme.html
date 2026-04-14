@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../back-end/style.css">
     <title>Criar Filme</title>
 </head>
-<body>
-    
-    <form id="form">
-        <input type="text" id="nome" placeholder="Nome" required><br><br>
-    
-        <input type="text" id="descricao" placeholder="Descrição" required><br><br>
-    
-        <input type="text" id="imagem" placeholder="URL da imagem" required><br><br>
+<body class="cinema">
 
-        <input type="text" id="ano" placeholder="Ano do filme" required><br><br>
+    <div class="form-wrapper">
+        <div class="card-criar">
+            <h2 class="titulo-form">Adicionar Filme</h2>
 
-    
-        <button type="submit">Enviar</button>
-    </form>
+            <form id="form">
+                <input type="text" id="nome" placeholder="Nome" required>
+
+                <input type="text" id="descricao" placeholder="Descrição" required>
+
+                <input type="text" id="imagem" placeholder="URL da imagem" required>
+
+                <input type="text" id="ano" placeholder="Ano do filme" required>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+
+            <button class="btn voltar" onclick="window.location.href='index.html'">
+                Voltar
+            </button>
+        </div>
+    </div>
 
     <script src="../back-end/funcoes.js"></script>
     <script>
         adicionar()
     </script>
+
 </body>
 </html>
