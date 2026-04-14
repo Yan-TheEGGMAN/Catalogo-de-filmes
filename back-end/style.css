@@ -1,10 +1,10 @@
 /* Css */
-
+/* Que o Css tenha Piedade de mim */
 .cinema {
     background-color: rgb(19, 19, 19);
     color: white;
     
-}
+}  
 
 .butao1 {
     width: 160px;
@@ -17,6 +17,11 @@
     cursor: pointer;
 }
 
+.butao1:hover {
+    background-color: #8b0000;
+}
+
+/* deixar bonito o botão sem treçinho */
 a {
   text-decoration: none;
 }
@@ -35,6 +40,7 @@ a {
   padding: 20px;
 }
 
+/* Card maldito */
 .card {
   padding: 10px;
   border: 1px solid red;
@@ -43,6 +49,7 @@ a {
   box-sizing: border-box;
 }
 
+/* yan, seu preguisoso vc poderia ter feito no JS */
 .card img {
   width: 100%;
   height: auto;
@@ -96,8 +103,12 @@ body{
     background-color: #b90000;
     color: rgb(218, 218, 218);
     border-radius: 6px;
-    border-color: #a40000;
+    border-color: #b9b9b9;
     cursor: pointer;
+}
+
+.butao2:hover {
+    background-color: #810000;
 }
 
 .butao2_d {
@@ -108,8 +119,12 @@ body{
     background-color: #790000;
     color: rgb(218, 218, 218);
     border-radius: 6px;
-    border-color: #6d0000;
+    border-color: #b9b9b9;
     cursor: pointer;
+}
+
+.butao2_d:hover {
+    background-color: #410000;
 }
 
 
