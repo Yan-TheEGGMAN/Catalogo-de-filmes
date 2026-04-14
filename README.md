@@ -4,3 +4,7 @@
 
 <img src="https://media1.tenor.com/m/uMYIB01lFB8AAAAC/p-club-monica.gif">
 <img src="https://media1.tenor.com/m/Zf05bkzk4QgAAAAC/pe-na-p-club.gif">
+
+<h1<sequencia de imagens da produção</h1>
+<img src="caos1.png">
+<img src="caos2.png">
