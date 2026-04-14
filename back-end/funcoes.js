@@ -30,16 +30,37 @@ function carregar(){
 }
 
 function adicionar(){
-    const form = document.querySelector(".form")
+    const form = document.querySelector("#form")
 
-    form.addEventListener("submit", event => {
+    form.addEventListener("submit",(e)=> {
 
-        event.preventDefault()
+        e.preventDefault()
 
-        const formData = new FormData(form)
-        const data = Object.fromEntries(formData)
+        const nome = document.getElementById("nome").value
+        const descricao = document.getElementById("descricao").value
+        const imagem = document.getElementById("imagem").value
+        const ano = document.getElementById("ano").value
 
-        
+        const novoFilme = {
+            id: `produto-${Date.now()}`,
+            nome: nome,
+            descricao: descricao,
+            imagem: imagem,
+            ano: ano
+        }
+
+
+        let filmes = JSON.parse(localStorage.getItem("filmes")) || []
+
+        filmes.push(novoFilme)
+
+        localStorage.setItem("filmes", JSON.stringify(filmes))
+
+        alert("Filme adicionado com sucesso!")
+
+        form.reset()
+
+
 
     })
 }
