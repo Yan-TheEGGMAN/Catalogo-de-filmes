@@ -52,6 +52,23 @@ function adicionar(){
             ano: ano
         }
 
+        if (isNaN(ano)) {
+            alert("O campo ano deve ter apenas números")
+            return
+        }
+
+        const imgTeste = new Image()
+
+        imgTeste.onload = () => {
+            console.log("imagem válida")
+        }
+
+        imgTeste.onerror = () => {
+            alert("A imagem não carregou. Verifique a URL.")
+        }
+
+        imgTeste.src = imagem
+
 
         let filmes = JSON.parse(localStorage.getItem("filmes")) || []
 
