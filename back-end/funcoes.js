@@ -29,7 +29,7 @@ function carregar(){
             card.appendChild(ano)
 
             card.addEventListener("click", () => {
-                window.location.href = `detalhes.html?id=${filme.id}`
+                window.location.href = `infoFilme.html?id=${filme.id}`
             })
             
             container.appendChild(card)
