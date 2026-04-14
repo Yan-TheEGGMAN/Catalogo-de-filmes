@@ -6,5 +6,5 @@
 <img src="https://media1.tenor.com/m/Zf05bkzk4QgAAAAC/pe-na-p-club.gif">
 
 <h1>sequencia de imagens da produção</h1>
-<img src="img/caos1.png">
-<img src="img/caos2.png">
+<img src="github/img/caos1.png">
+<img src="github/img/caos2.png">
