@@ -113,6 +113,7 @@ function novaPagina(){
                         <h1>${filme.nome}</h1>
                         <p>${filme.descricao}</p>
                         <h3>Ano: ${filme.ano}</h3>
+                        <button id="btnExcluir">Excluir</button>
                     </div>
                 `
             })
