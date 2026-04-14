@@ -55,7 +55,19 @@ body{
 }
 
 
+/* Criar Filme */
+.card-criar {
+  background-color: #444;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
 /* Sobre */
+
 
 .sobre {
     max-width: 800px;

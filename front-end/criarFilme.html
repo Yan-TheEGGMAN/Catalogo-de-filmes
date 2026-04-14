@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../back-end/style.css">
     <title>Criar Filme</title>
 </head>
-<body>
-    
-    <form id="form">
-        <input type="text" id="nome" placeholder="Nome"><br><br>
-    
-        <input type="text" id="descricao" placeholder="Descrição"><br><br>
-    
-        <input type="text" id="imagem" placeholder="URL da imagem"><br><br>
+<body class="cinema">
+    <div class="container">
+        <div class="card-criar">
+            <form id="form">
+                <input type="text" id="nome" placeholder="Nome"><br><br>
+            
+                <input type="text" id="descricao" placeholder="Descrição"><br><br>
+            
+                <input type="text" id="imagem" placeholder="URL da imagem"><br><br>
 
-        <input type="text" id="ano" placeholder="Ano do filme"><br><br>
+                <input type="text" id="ano" placeholder="Ano do filme"><br><br>
 
-    
-        <button type="submit">Enviar</button>
-    </form>
+            
+                <button type="submit" onclick="window.location.href='index.html'">Enviar</button>
+            </form>
+        </div>
+    </div>
 
     <script src="../back-end/funcoes.js"></script>
     <script>
