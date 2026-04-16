@@ -8,3 +8,9 @@
 <h1>sequencia de imagens da produção</h1>
 <img src="github/img/caos1.png">
 <img src="github/img/caos2.png">
+<img src="github/img/caos3.png">
+<img src="github/img/caos4.png">
+<img src="github/img/caos5.png">
+<img src="github/img/caos6.png">
+<img src="github/img/caos7.png">
+<img src="github/img/caos8.png">
