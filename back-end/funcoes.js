@@ -7,21 +7,22 @@ function carregar(){
 
         const todosFilmes = [...produtos, ...filmesSalvos]
         todosFilmes.map(filme =>{
-            const card = document.createElement("div")
+            const card = document.createElement("div") //cria uma div com calsse card
             card.classList.add("card")
 
-            const img = document.createElement("img")
+            const img = document.createElement("img") //Cria um elemento img
             img.src = filme.imagem
             img.alt = filme.nome
 
-            const titulo = document.createElement("h3")
+            const titulo = document.createElement("h3")  //Cria um elemento h3 (titulo)
             titulo.textContent = filme.nome
 
-            const desc = document.createElement("h4")
+            const desc = document.createElement("h4")  //Cria um elemento h4(descrição)
             desc.textContent = filme.descricao
 
-            const ano = document.createElement("h3")
+            const ano = document.createElement("h3") //Cria um elemento h3(ano)
             ano.textContent = `Feito em ${filme.ano}`
+            ano.classList.add("ano") //adiciona a classe ano ou elemento h3
 
             card.appendChild(img)
             card.appendChild(titulo)
@@ -108,11 +109,24 @@ function novaPagina(){
                 }
     
                 detalhes.innerHTML = `
-                    <div class="card">
-                        <img src="${filme.imagem}" alt="${filme.nome}">
-                        <h1>${filme.nome}</h1>
-                        <p>${filme.descricao}</p>
-                        <h3>Ano: ${filme.ano}</h3>
+                    <div class="pag">
+                        <div class="lImg">
+                            <img src="${filme.imagem}" alt="${filme.nome}">
+                        </div>
+                        <div class="informacoes">
+                            <h1>${filme.nome}</h1>
+                            <p>${filme.descricao}</p>
+                            <h3>Ano: ${filme.ano}</h3>
+
+                            <a href="index.html">
+                                <button class="butao2">Voltar</button> 
+                            </a>
+                            <button class="butao2_d" id="btnExcluir">Deletar</button>
+                        </div>
+
+                        
+            
+                       
                     </div>
                 `
 

@@ -47,12 +47,30 @@ a {
   border-radius: 10px;
   width: 100%;
   box-sizing: border-box;
+  font-family: 'Lora', serif;
+  line-height: 1.7;
+  word-break: break-all;
+  overflow-wrap: break-word;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  height: 950px;
+
 }
 
+.card h4{
+    font-weight: normal;
+}
+
+.ano{
+    color: #ffffff36;
+}
 /* yan, seu preguisoso vc poderia ter feito no JS */
 .card img {
   width: 100%;
-  height: auto;
+  height: 650px;
   border-radius: 5px;
 }
 
@@ -67,44 +85,63 @@ body{
 
 
 /* Info Filme */
-.cinema2 {
-    background-color: rgb(19, 19, 19);
-    color: white;
+
+.pag {
+    background-color: #160000;
+    width: 97vw;
+    height: auto;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 300px;
+
     text-align: center;
     text-decoration: center;
 }
+.lImg{
+   padding-bottom: 200px;
+}
 
-.card2 {
-    background-color: #1e1e1e;
-    padding: 30px;
-    border-radius: 12px;
-    width: 300px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+.pag img{
+    width: 450px;
+    height: 650px;
+    border-radius: 5px;
+    border-radius: 15px;
+    border: 15px groove #920909;
+}
+
+.informacoes{
     text-align: center;
-    text-decoration: center;
+    width: 700px;
+    height: auto;
+
+    overflow: hidden;
+    word-break: break-all;
+    overflow-wrap: break-word;
 }
 
-.card2 a {
-    display: block;
-    margin-top: 20px;
+.informacoes h1{
+    font-size: 64px;
+    padding-bottom: 60px;
+}
+.informacoes p{
+    font-size: 32px;
 }
 
-.container2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
 .butao2 {
-    width: 90px;
-    height: 30px;
+    width: 160px;
+    height: 50px;
     text-align: center;
     background-color: #b90000;
     color: rgb(218, 218, 218);
     border-radius: 6px;
     border-color: #b9b9b9;
     cursor: pointer;
+    font-size: 24px;
 }
 
 .butao2:hover {
@@ -112,19 +149,26 @@ body{
 }
 
 .butao2_d {
-    width: 90px;
-    height: 30px;
+    width: 160px;
+    height: 50px;
     text-align: center;
     margin: 2%;
     background-color: #790000;
-    color: rgb(218, 218, 218);
+    color: rgb(223, 223, 223);
     border-radius: 6px;
     border-color: #b9b9b9;
     cursor: pointer;
+    font-size: 24px;
 }
 
 .butao2_d:hover {
-    background-color: #410000;
+    background-color: #790000; /* mantém a cor */
+    color: white;
+    text-shadow: 0 0 5px #ff4d4d,
+                 0 0 10px #aa1616;
+    box-shadow: 0 0 8px #aa1616,
+                0 0 15px #790000;
+    transform: scale(1.03);
 }
 
 
@@ -201,11 +245,13 @@ body{
     max-width: 800px;
     margin: 40px auto; /* centraliza */
     padding: 20px;
-    background-color: #1e1e1e;
+    background-color: #1d1c1c;
     border-radius: 12px;
     color: #ffffff;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    border: 6px ridge;
+    border-color: #990505; 
 }
 
 .sobre h2 {
@@ -232,4 +278,53 @@ body{
     margin: 20px auto; /* centraliza */
     text-align: center;
     cursor: pointer;
+}
+
+.pagSobre {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.90),
+        rgba(0, 0, 0, 0.90)
+    ),
+    url("img/circus.gif");
+
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: #131212;
+}
+
+/*MENU DE NAVEGAÇÃO*/
+
+.menuNav{
+    width: 97.5vw;
+    height: 12vh;
+    background-color: #a10606;
+    border: 15px groove #920909;
+
+    display: flex ;
+    flex-direction: row;
+    justify-content: start;
+    align-items:center ;
+    gap: 70px;
+}
+
+.logo{
+    width: 150px;
+    height: 125px;
+    object-fit: contain;
+}
+
+
+.menuNav a{
+    font-size: 60px;
+    color: whitesmoke;
+    font-family: 'Playfair Display', serif;
+    transition: all 0.3s ease;
+}
+
+.menuNav a:hover{
+    color: #fff5f5;
+    text-shadow: 0 0 6px #aa1616,
+                 0 0 12px #790000;
+    transform: scale(1.03);
 }
